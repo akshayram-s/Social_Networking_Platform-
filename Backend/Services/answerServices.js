@@ -1,13 +1,5 @@
 var answers = require("../models/answerModel");
 var questions = require("../models/questionModel");
-var mongoose = require("mongoose");
-var express = require("express");
-var app = express();
-var cors = require("cors");
-var bodyParser = require("body-parser");
-var jsonParser = bodyParser.json();
-app.use(jsonParser);
-app.use(cors());
 const answerService = {
   postAns: async (id, ans, userID) => {
     var aDoc = await answers.create({
