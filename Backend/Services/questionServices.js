@@ -1,7 +1,4 @@
 var questions = require("../models/questionModel");
-var mongoose = require("mongoose");
-var express = require("express");
-
 const questionService = {
   post: async (cat, ques, id) => {
     var qDoc = await questions.create({
