@@ -1,13 +1,4 @@
 var answerServices = require("../Services/answerServices");
-var express = require("express");
-var app = express();
-var cors = require("cors");
-var bodyParser = require("body-parser");
-var jsonParser = bodyParser.json();
-var router = express.Router();
-router.use(jsonParser);
-app.use(cors());
-
 router.post("/answer/:userID/:id", async (req, res) => {
   const { answer } = req.body;
   const ques = await answerServices.postAns(
