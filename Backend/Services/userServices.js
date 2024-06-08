@@ -1,10 +1,4 @@
 var users = require("../models/userModel");
-var mongoose = require("mongoose");
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-var jsonParser = bodyParser.json();
-app.use(jsonParser);
 const userService = {
   register: async (user) => {
     var uDoc = await users.create(user);
