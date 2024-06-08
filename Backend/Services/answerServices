@@ -32,7 +32,7 @@ const answerService = {
     var upd = await answers.updateOne({ questionid: id }, { answer: ans });
     return upd;
   },
-  getAns: async (id) => {
+  getAns: async (id) => { 
     var upd = await answers.find({ questionid: id });
     return upd;
   },
