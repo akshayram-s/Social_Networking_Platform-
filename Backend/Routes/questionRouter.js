@@ -1,13 +1,4 @@
 var questionServices = require("../Services/questionServices");
-var express = require("express");
-var app = express();
-var cors = require("cors");
-var bodyParser = require("body-parser");
-var jsonParser = bodyParser.json();
-var router = express.Router();
-router.use(jsonParser);
-app.use(cors());
-
 router.post("/question/:userID", async (req, res) => {
   const { category, question } = req.body;
   const ques = await questionServices.post(
