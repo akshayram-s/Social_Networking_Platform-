@@ -1,14 +1,4 @@
 var userServices = require("../Services/userServices");
-var express = require("express");
-var app = express();
-var cors = require("cors");
-const router = express.Router();
-app.use(router);
-const authenticate = require("../authenticate");
-var bodyParser = require("body-parser");
-var jsonParser = bodyParser.json();
-router.use(jsonParser);
-
 router.post("/Signup", async (req, res) => {
   var data = await userServices.register(req.body);
   res.send(data);
